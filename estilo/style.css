@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a.me {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
+.mb{margin-bottom: 30px;}
+.mt{margin-top: 50px;}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #282828, #FC2E24, #FD5217, #FF9001);
+    background-attachment: fixed;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+hr{
+    width: 248px;
+    border-color: #eee;
+}
+
+.itensmenu{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    border-bottom: 2px solid #eee;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.itensmenu:hover{
+    opacity: 0.7;
+    
+}
+
+.btnsmenu{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -130px;
+}
+
+body{
+    height: auto;
+}
+
+.geral{
+    display: ;
+}
+
+.containerhidden{
+    width: 250px;
+    height: auto;
+    
+}
+
+.background{
+    background-color: #151515;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.background h1 {
+    font-size: 7em;
+    background: -webkit-linear-gradient(left, #FC2E24, #FD5217, #FF9001);
+    background: linear-gradient(to right, #FC2E24, #FD5217, #FF9001);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
+.background p {
+    font-size: 4em;
+    background: -webkit-linear-gradient(left, #FC2E24, #FD5217, #FF9001);
+    background: linear-gradient(to right, #FC2E24, #FD5217, #FF9001);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
+.background2{
+    margin-top: 50px;
+    background-color: #151515;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

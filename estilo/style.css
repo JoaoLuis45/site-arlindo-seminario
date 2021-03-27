@@ -349,6 +349,8 @@ div.background input:checked ~ label .menuhamb{
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
+    border: 5px solid #151515;
+    padding: 30px;
     
 }
 div.background input:checked ~ .rescont{
@@ -365,6 +367,7 @@ div.background input:checked ~ .text-block{
     font-size: 5em;
     margin-bottom: 40px;
     text-align: center;
+
 }
 .rescont p{
     color: black;
@@ -382,3 +385,4 @@ div.background input:checked ~ .text-block{
 
 
 .p2{margin-top: 20px;}
+

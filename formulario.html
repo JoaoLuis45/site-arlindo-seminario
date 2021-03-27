@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="estilo/style.css">
     <title>Formulário</title>
     <script>
-        const input = document.querySelector('#meses')
-        console.log(input)
+        const text = document.querySelector('#inv').value
+        const button = document.querySelector('#subbtn')
+        button.addEventListener('click', () => {
+            console.log(text)
+        })
     </script>
 </head>
 <body>
@@ -33,7 +36,7 @@
                 <form name="formulario" action="" method="POST">
                     <fieldset>
                         <label class="quebra " for="lmeses">Mês que deseja analisar:</label>
-                        <input list="meses" name="lmeses" id="mes" required placeholder="Mês">
+                        <input list="meses" name="lmeses" id="mes" placeholder="Mês">
                             <datalist id="meses">
                                 <option value="Jan">Janeiro</option>
                                 <option value="Fev">Fevereiro</option>
@@ -49,10 +52,10 @@
                                 <option value="Dez">Dezembro</option>
                             </datalist>
                         <label class="quebra" for="investimento">Quanto a empresa investiu:</label>
-                        <input type="text" name="investimento" required placeholder="R$ 1000,00">
+                        <input id="inv" type="text" name="investimento" placeholder="R$ 1000,00">
                         <label class="quebra" for="retorno">Quanto a empresa investiu:</label>
-                        <input type="text" name="retorno" required placeholder="R$ 1000,00">
-                        <input class="quebra" type="submit" id="submit">
+                        <input id="ret" type="text" name="retorno" placeholder="R$ 1000,00">
+                        <input id="subbtn" class="quebra" type="submit">
                     </fieldset>
                 </form>
             </div>

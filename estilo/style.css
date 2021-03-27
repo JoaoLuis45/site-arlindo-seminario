@@ -409,6 +409,6 @@ div.background input:checked ~ .text-block{
         width: 0;
     }
     to{
-        width: 6em;
+        width: 6.75em;
     }
 }

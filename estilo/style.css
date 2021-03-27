@@ -290,7 +290,7 @@ background:rgba(0,0,0,0.5);
     right: 25px;
     cursor: pointer;
     box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
-    transition: box-shadow 1s ease-in-out;
+    transition: box-shadow .7s ease-in-out;
 }
 .menuhamb:hover{
     box-shadow: 0 0 0 8px #fff, 0 0 0 8px #fff;

@@ -121,7 +121,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, #FC2E24, #FD5217, #FF9001);
+    background-image: linear-gradient(to right, #fb8d58, #f0555b, #e63f5b, #e32e65 , #d32a65);
     transform: translateX(-100%);
     animation: enlargeblock .5s .6s both, revealblock .5s 1.1s both;
 }

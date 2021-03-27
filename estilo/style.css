@@ -70,9 +70,9 @@ body{
 }
 
 .containerhidden{
-    width: 250px;
-    height: auto;
-    
+    width: 287px;
+    height: 100vh; 
+    background-color: purple;
 }
 
 .background{
@@ -100,7 +100,7 @@ body{
     -webkit-text-fill-color: transparent;  
 }
 .background2{
-    margin-top: 50px;
+    margin-top: 25px;
     background-color: #151515;
     color: white;
     width: 100%;
@@ -109,4 +109,43 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.inblock{
+    display: flex;
+}
+
+.background3{
+    background-color: #151515;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quebra{
+    display: block;
+}
+
+form label{
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+form input{
+    padding: 10px;
+    width: 330px;
+    margin-top: 10px;
+    background-color: #505050;
+    outline: none;
+    border-radius: 6px;
+    color: #eee;
+}
+
+fieldset{
+    border: 3px solid #808080;
+    padding: 30px;
 }

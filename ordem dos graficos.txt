@@ -1,0 +1,10 @@
+1 - salários 
+2 - cargos
+3 - produto mais vendido
+4 - lucro e prejuízo
+5 - quantidade de pessoas por cargo
+
+1 e 2 - gráfico 2
+3 - gráfico 1
+4 - gráfico 5
+5 - gráfico 3

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style.css">
+    <title>Formulário</title>
+    <script>
+        const input = document.querySelector('#meses')
+        console.log(input)
+    </script>
+</head>
+<body>
+    <div class="geral">
+        <div class="menu">
+            <div class="btnsmenu">
+                <img class="mb mt" src="imagens/miao2.png" alt="Logo da empresa!" width="120px" height="120px">
+                <div class="itensmenu">
+                    <a class="me" href="index.html">Home</a>
+                </div>
+                <div class="itensmenu">
+                    <a class="me" href="">Painel de Controle</a>
+                </div>
+                <div class="itensmenu">
+                    <a class="me" href="formulario.html">Formulário</a>
+                </div>
+            </div>
+        </div>
+        <div class="inblock">
+            <div class="containerhidden"></div>
+            <div class="background3">
+                <form name="formulario" action="" method="POST">
+                    <fieldset>
+                        <label class="quebra " for="lmeses">Mês que deseja analisar:</label>
+                        <input list="meses" name="lmeses" id="mes" required placeholder="Mês">
+                            <datalist id="meses">
+                                <option value="Jan">Janeiro</option>
+                                <option value="Fev">Fevereiro</option>
+                                <option value="Mar">Março</option>
+                                <option value="Abr">Abril</option>
+                                <option value="maio">Maio</option>
+                                <option value="Jun">Junho</option>
+                                <option value="Jul">Julho</option>
+                                <option value="Ago">Agosto</option>
+                                <option value="Set">Setembro</option>
+                                <option value="Out">Outubro</option>
+                                <option value="Nov">Novembro</option>
+                                <option value="Dez">Dezembro</option>
+                            </datalist>
+                        <label class="quebra" for="investimento">Quanto a empresa investiu:</label>
+                        <input type="text" name="investimento" required placeholder="R$ 1000,00">
+                        <label class="quebra" for="retorno">Quanto a empresa investiu:</label>
+                        <input type="text" name="retorno" required placeholder="R$ 1000,00">
+                        <input class="quebra" type="submit" id="submit">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

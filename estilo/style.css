@@ -393,7 +393,7 @@ div.background input:checked ~ .text-block{
     overflow: hidden;
 }
 .typing-animation{
-    animation: blinkcursor 500ms steps(40) infinite normal, typing 2.5s steps(15) 1s normal both;
+    animation: blinkcursor 500ms steps(40) infinite normal, typing 2.5s steps(15) .7s normal both;
 }
 @keyframes blinkcursor {
     from {

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style.css">
+    <title>Painel de Controle</title>
+</head>
+<body>
+    <div class="geral">
+        <div class="menu">
+            <div class="btnsmenu">
+                <img class="mb mt" src="imagens/miao2.png" alt="Logo da empresa!" width="120px" height="120px">
+                <div class="itensmenu">
+                    <a class="me" href="index.html">Home</a>
+                </div>
+                <div class="itensmenu">
+                    <a class="me" href="dashboard.html">Painel de Controle</a>
+                </div>
+                <div class="itensmenu">
+                    <a class="me" href="formulario.html">Formulário</a>
+                </div>
+            </div>
+        </div>
+        <div class="inblock">
+            <div class="containerhidden"></div>
+            <div class="background3">
+                <h1 style="font-size: 5em; margin-bottom: 50px; color: #eee; font-family: 'Dela Gothic One', cursive;">Painel de Controle</h1>
+                <div class="container">
+                    <div class="content">
+                        <div class="components">
+                            <div id="chart"></div>
+                        </div>
+                        <div class="components">
+                            <div id="chart2"></div>
+                        </div>
+                        <div class="components">
+                            <div id="chart3"></div>
+                        </div>
+                        <div class="components">
+                            <div id="chart5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        const options = {
+    chart: {
+        height: 250,
+        type: 'line',
+        width: 550,
+        background: 'linear-gradient( 135deg, #2D2E34 10%, #202225 40%)',
+        foreColor: "#fff",
+        toolbar: {
+          show: false,
+          offsetX: 0,
+          offsetY: 0,
+        }
+      },
+    series: [{
+      name: "A Pequena Sereia",
+      data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
+    },
+    {
+      name: "Tinker Bell",
+      data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+    },
+    {
+      name: "Barbie em Vida De Sereia",
+      data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+    }
+  ],
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    curve: 'smooth',
+    lineCap: 'butt',
+    width: 3,
+  },
+  colors: ['#2E93fA', '#66DA26', '#FD6585'],
+  title: {
+    text: 'Conteúdos mais Vistos',
+    align: "left",
+    offsetX: 50,
+      style: {
+        fontSize: "15px",
+        color: '#fff'
+      }
+  },
+  markers: {
+    size: 0,
+    hover: {
+      sizeOffset: 6
+    }
+  },
+  xaxis: {
+    categories: ['01 Jan', '02 Fev', '03 Mar', '04 Abr', '05 Mai', '06 Jun', '07 Jul', '08 Ago', '09 Set',
+      '10 Out', '11 Nov', '12 Dez'
+    ],
+
+    labels: {
+        show: true,
+        style: {
+            colors: '#fff',
+            fontSize: '10px',
+            marginRight: 5,
+            
+        },
+    }
+  },
+  
+};
+
+const options2 = {
+    chart: {
+      height: 250,
+      width: 550,
+      type: "bar",
+      background: 'linear-gradient( 135deg, #2D2E34 10%, #202225 40%)',
+      foreColor: "#fff",
+      toolbar: {
+          show: false,
+          offsetX: 0,
+          offsetY: 0,
+        }
+      
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false
+      }
+    },
+    series: [
+      {
+        name: "Rendimento",
+        data: [
+          8550405,
+          3971883,
+          2720546,
+          2296224,
+          1567442,
+          1563025,
+          1469845,
+          1394928,
+          1300092,
+          1026908
+        ]
+      }
+    ],
+    xaxis: {
+      categories: [
+        "Drama",
+        "Ação",
+        "Romance",
+        "Aventura",
+        "Comédia",
+        "Histórico",
+        "Biográfico",
+        "C. Dramática",
+        "C. Romântica",
+        "Fantasia"
+      ],
+      labels: {
+        show: true,
+        style: {
+            colors: '#fff',
+            fontSize: '10px',
+            marginRight: 5,
+            
+        },
+    }
+    },
+    fill: {
+        type: 'gradient',
+        gradient: {
+          shade: 'dark',
+          gradientToColors: ['#5961F9'],
+          shadeIntensity: 10,
+          type: 'horizontal',
+          opacityFrom: 0.1,
+          opacityTo: 1,
+          stops: [0, 100, 100, 100]
+        }
+    },
+    dataLabels: {
+      enabled: false
+    },
+  
+    title: {
+      text: "Gêneros e Rendimentos",
+      align: "left",
+      offsetX: 50,
+      style: {
+        fontSize: "15px",
+        color: '#fff'
+      }
+    }
+};
+
+const options3 = {
+    series: [44, 55, 67, 83],
+    chart: {
+    height: 250,
+    width: 300,
+    type: 'radialBar',
+    background: 'linear-gradient( 135deg, #2D2E34 10%, #202225 40%)',
+    foreColor: "#fff",
+  },
+  title: {
+    text: 'Total de Conteúdos',
+    align: "left",
+    offsetX: 50,
+    style: {
+        fontSize: "15px",
+        color: '#fff'
+    }
+  },
+  plotOptions: {
+    radialBar: {
+      dataLabels: {
+        name: {
+          fontSize: '22px',
+        },
+        value: {
+          fontSize: '16px',
+        },
+        total: {
+          show: true,
+          label: 'Total',
+          colors: '#fff',
+          formatter: function (w) {
+            // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
+            return 249
+          }
+        }
+      }
+    }
+  },
+  labels: ['Drama', 'Ação', 'Comédia', 'Romance'],
+  };
+
+  const options4 = {
+    series: [14, 23, 21, 17, 15, 10, 12, 17, 21],
+    chart: {
+    type: 'polarArea',
+    background: 'linear-gradient( 135deg, #2D2E34 10%, #202225 40%)',
+    foreColor: "#fff",
+    width: 400,
+    height: 250,
+  },
+  title: {
+    text: "Largest US Cities By Population",
+      align: "left",
+      offsetX: 50,
+      style: {
+        fontSize: "15px",
+        color: '#fff',
+      }
+  },
+  stroke: {
+    colors: ['#fff']
+  },
+  fill: {
+    opacity: 0.8,
+  },
+  responsive: [{
+    breakpoint: 480,
+    options: {
+      chart: {
+        width: 200
+      },
+      legend: {
+        position: 'bottom'
+      }
+    }
+  }]
+};
+
+const options5 = {
+    series: [{
+    name: 'Investimento',
+    data: [31, 40, 28, 51, 42, 109, 100]
+  }, {
+    name: 'Retorno',
+    data: [11, 32, 45, 32, 34, 52, 41]
+  }],
+    chart: {
+    height: 200,
+    width: 500,
+    foreColor: "#fff",
+    type: 'area',
+    toolbar: {
+          show: false,
+          offsetX: 0,
+          offsetY: 0,
+        }
+  },
+  colors: ['#2E93fA','#FD6585'],
+  dataLabels: {
+    enabled: false
+  },
+  title: {
+    text: "Investimento e Retorno",
+      align: "left",
+      offsetX: 50,
+      style: {
+        fontSize: "15px",
+        color: '#fff',
+    }
+  },
+  stroke: {
+    curve: 'smooth'
+  },
+  xaxis: {
+    categories: ["01-05", "06-10", "11-15", "16-20", "21-25", "26-30", "Feriados"]
+  },
+  };
+
+
+  const chart = new ApexCharts(document.querySelector("#chart"), options);
+  const chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+  const chart3 = new ApexCharts(document.querySelector("#chart3"), options3);
+  const chart4 = new ApexCharts(document.querySelector("#chart4"), options4);
+  const chart5 = new ApexCharts(document.querySelector("#chart5"), options5);
+
+
+  chart.render();
+  chart2.render();
+  chart3.render();
+  chart4.render()
+  chart5.render()
+    </script>
+</body>
+</html>

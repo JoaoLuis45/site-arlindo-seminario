@@ -6,13 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo/style.css">
     <title>Formulário</title>
-    <script>
-        const text = document.querySelector('#inv').value
-        const button = document.querySelector('#subbtn')
-        button.addEventListener('click', () => {
-            console.log(text)
-        })
-    </script>
 </head>
 <body>
     <div class="geral">
@@ -23,7 +16,7 @@
                     <a class="me" href="index.html">Home</a>
                 </div>
                 <div class="itensmenu">
-                    <a class="me" href="">Painel de Controle</a>
+                    <a class="me" href="dashboard.html">Painel de Controle</a>
                 </div>
                 <div class="itensmenu">
                     <a class="me" href="formulario.html">Formulário</a>
@@ -33,7 +26,8 @@
         <div class="inblock">
             <div class="containerhidden"></div>
             <div class="background3">
-                <form name="formulario" action="" method="POST">
+                <h1 style="font-size: 5em; margin-bottom: 50px; color: #eee; font-family: 'Dela Gothic One', cursive;">Formulário</h1>
+                <form id="form" name="formulario" action="" method="POST">
                     <fieldset>
                         <label class="quebra " for="lmeses">Mês que deseja analisar:</label>
                         <input list="meses" name="lmeses" id="mes" placeholder="Mês">
@@ -61,5 +55,22 @@
             </div>
         </div>
     </div>
+    <script>
+        const inv = document.querySelector('#inv')
+        const ret = document.querySelector('#ret')
+        const form = document.querySelector('#form')
+        const datalist = document.querySelector('[list="meses"]')
+
+        datalist.addEventListener('change', function() {
+            console.log(this.value)
+        })
+
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+            console.log(inv.value)
+            console.log(ret.value)
+        })
+    </script>
 </body>
 </html>

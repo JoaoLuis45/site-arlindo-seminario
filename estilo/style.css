@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&family=Dela+Gothic+One&display=swap');
 
 *{
     padding: 0px;
@@ -28,6 +30,8 @@ a.me {
     position: fixed;
     left: 0;
     top: 0;
+    font-family: 'Archivo Narrow', sans-serif;
+    
 }
 hr{
     width: 248px;
@@ -86,11 +90,14 @@ body{
     justify-content: center;
 }
 .background h1 {
-    font-size: 7em;
+    font-size: 5em;
     background: -webkit-linear-gradient(left, #FC2E24, #FD5217, #FF9001);
     background: linear-gradient(to right, #FC2E24, #FD5217, #FF9001);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;  
+    font-family: 'Dela Gothic One', cursive;
+    letter-spacing: 10px;
+    
 }
 .background p {
     font-size: 4em;
@@ -98,6 +105,52 @@ body{
     background: linear-gradient(to right, #FC2E24, #FD5217, #FF9001);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;  
+    opacity: 0;
+    animation: fadeintext 0s 1.1s both;
+    font-family: 'Dela Gothic One', cursive;
+    
+}
+.text-block{
+    position: relative;
+    overflow: hidden;
+}
+.text-block::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #FC2E24, #FD5217, #FF9001);
+    transform: translateX(-100%);
+    animation: enlargeblock .5s .6s both, revealblock .5s 1.1s both;
+}
+
+@keyframes fadeintext{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes revealblock{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes enlargeblock{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
 }
 .background2{
     margin-top: 25px;
@@ -146,10 +199,122 @@ form input{
 }
 
 fieldset{
-    border: 3px solid #808080;
+    border: 5px solid #808080;
     padding: 30px;
 }
 
 #subbtn{
+    margin-top: 30px;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+#subbtn:hover{
+    cursor: pointer;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px black;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #151515;
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    flex-direction: column;
+
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+background:rgba(0,0,0,0.5);
+}
+
+.content {
     margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 95%;
+    height: 100%;
+   
+}
+
+.components{
+    background:linear-gradient( 135deg, #2D2E34 10%, #202225 40%);
+    border-radius:10px;
+    display: flex;
+    height: 270px;
+    align-items: center;
+    margin-bottom: 40px;
+    box-shadow: 
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.apexcharts-tooltip{
+    color: #151515;
+}
+
+.containercont{
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 50%;
+    
+}
+.containercont span{
+    text-transform: uppercase;
+    color: #eee;
+    display: block;
+}
+
+.texto1{
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: #fff;
+    font-family: 'Dela Gothic One', cursive;
+    margin-bottom: 20px;
+
+    position: relative;
+    animation: text 3s 1;
+    
+}
+
+.texto2{
+    font-size: 30px;
+    color: #fff;
+    margin-top: 50px;
+
+}
+@keyframes text{
+    0%{
+        color: black;
+        margin: -20px;
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
 }

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 *{
     padding: 0px;
@@ -386,3 +387,28 @@ div.background input:checked ~ .text-block{
 
 .p2{margin-top: 20px;}
 
+#titleform{
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+}
+.typing-animation{
+    animation: blinkcursor 500ms steps(40) infinite normal, typing 2.5s steps(15) 1s normal both;
+}
+@keyframes blinkcursor {
+    from {
+        border-right-color: rbga(255, 255, 255, 0.75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 6em;
+    }
+}

@@ -61,9 +61,13 @@
         const ret = document.querySelector('#ret')
         const form = document.querySelector('#form')
         const datalist = document.querySelector('[list="meses"]')
+        let mes 
+        let investimento
+        let retorno
 
         datalist.addEventListener('change', function() {
             console.log(this.value)
+            mes = this.value
         })
 
 
@@ -71,6 +75,17 @@
             e.preventDefault()
             console.log(inv.value)
             console.log(ret.value)
+
+            investimento = inv.value
+            retorno = ret.value
+
+            const passaValor= function(valor, valor2, valor3)
+            {
+                window.location = "dashboard.html?mes="+valor+"&inv="+valor2+"&ret="+valor3;
+            }
+
+            passaValor(mes, investimento, retorno);
+
         })
     </script>
 </body>

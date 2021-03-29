@@ -44,12 +44,43 @@
                         </div>
                     </div>
                 </div>
+                <div class="hide"></div>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script>
-        const options = {
+
+    function queryString(parameter) {  
+              let loc = location.search.substring(1, location.search.length);   
+              let param_value = false;   
+              let params = loc.split("&");
+              console.log(params)
+              for (i=0; i<params.length;i++) {   
+                  param_name = params[i].substring(0,params[i].indexOf('='));
+                  console.log(param_name) 
+                  if (param_name == parameter) {                                          
+                      param_value = params[i].substring(params[i].indexOf('=')+1)   
+                  }   
+              }   
+              if (param_value) {   
+                  return param_value;   
+              }   
+              else {   
+                  return undefined;   
+              }   
+        }
+
+    let mes = queryString("mes");
+    let inv = queryString("inv");
+    let ret = queryString("ret");
+
+    let result = ret - inv
+
+    console.log(result)
+
+
+    const options = {
     chart: {
         height: 250,
         type: 'line',
@@ -285,11 +316,15 @@ const options3 = {
 const options5 = {
     series: [{
     name: 'Investimento',
-    data: [31, 40, 28, 51, 42, 109, 100]
+    data: [5000, 3000, 6020, 8562, 4589, 4752, inv]
   }, {
     name: 'Retorno',
-    data: [11, 32, 45, 32, 34, 52, 41]
-  }],
+    data: [3000, 4100, 5000, 9000, 8563, 7589, ret]
+  },{
+    name: result ? `Resultado: ${result}` : 'Resultado',
+    data: [-2000,1100, -1020, 438, 3974, 2837, result]
+  }
+],
     chart: {
     height: 200,
     width: 500,
@@ -301,7 +336,7 @@ const options5 = {
           offsetY: 0,
         }
   },
-  colors: ['#2E93fA','#FD6585'],
+  colors: ['#2E93fA','#FD6585', '#66DA26'],
   dataLabels: {
     enabled: false
   },
@@ -318,7 +353,7 @@ const options5 = {
     curve: 'smooth'
   },
   xaxis: {
-    categories: ["01-05", "06-10", "11-15", "16-20", "21-25", "26-30", "Feriados"]
+    categories: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", `${mes ? mes : 'Em breve'}`]
   },
   };
 
@@ -336,5 +371,6 @@ const options5 = {
   chart4.render()
   chart5.render()
     </script>
+
 </body>
 </html>

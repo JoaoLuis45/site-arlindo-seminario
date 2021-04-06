@@ -30,7 +30,7 @@ a.me {
     flex-direction: column;
     width: 250px;
     height: 100vh;
-    background-image: linear-gradient(to bottom, #282828, #FC2E24, #FD5217, #FF9001);
+    background-image: linear-gradient(to bottom, #AC236C, #FC2E24, #FD5217, #FF9001);
     background-attachment: fixed;
     align-items: center;
     position: fixed;
